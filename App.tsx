@@ -1,9 +1,18 @@
-import './global.css';
+import { StatusBar } from "react-native";
+import "react-native-gesture-handler";
+import "./global.css";
 
-import 'react-native-gesture-handler';
-
-import RootStack from './src/navigation';
+import RootStack from "~/routes";
 
 export default function App() {
-  return <RootStack />;
+  return (
+    <>
+      <RootStack />
+      <StatusBar
+        barStyle="light-content"
+        translucent
+        backgroundColor="transparent"
+      />
+    </>
+  );
 }
